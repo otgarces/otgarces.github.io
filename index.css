@@ -25,7 +25,7 @@ body {
 }
 
 .content {
-    padding: 100px 0; /* Add some padding as needed */
+    padding: 20px 0; /* Add some padding as needed */
     flex-shrink: 0; /* Prevent content from shrinking */
 }
 
