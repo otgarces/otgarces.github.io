@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         option.addEventListener("mouseenter", () => {
             options.forEach(otherOption => {
                 if (otherOption !== option) {
-                    otherOption.style.opacity = "0.5";
+                    otherOption.style.opacity = "0.3";
                 }
             });
         });
