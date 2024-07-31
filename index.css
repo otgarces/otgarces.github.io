@@ -1,11 +1,100 @@
+/* Apply box-sizing globally to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column; /* Arrange child elements vertically */
     font-family: "Roboto", sans-serif;
     font-weight: 80;
     font-style: normal;
+    font-size: 14px;
+    color: #3d383d;
+    background-color: whitesmoke;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.content {
+    padding: 100px 0; /* Add some padding as needed */
+    flex-shrink: 0; /* Prevent content from shrinking */
+}
+
+h1 {
+    padding-left: 100px;
+    padding-top: 40px;
 }
 
 h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    padding-left: 100px;
+    font-weight: 400;
+}
+
+p {
+    width: 800px;
     font-size: 16px;
+    font-weight: 300;
+}
+
+p.desc {
+    font-size: 18px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+.panel {
+    background-color: #85aef9; /* Different background color */
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Space out the containers evenly */
+    padding: 20px; /* Add padding to the panel */
+    margin: 0; /* Ensure no extra margin */
+    flex: 1; /* Ensure panel grows to fill available space */
+    position: relative; /* Positioning context */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align items to the top */
+    width: 200px; /* Set a fixed width for the container */
+    padding: 10px; /* Add padding inside each container */
+}
+
+.panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.panel li {
+    margin: 10px 0;
+}
+
+.panel a {
+    text-decoration: none;
+    color: #3d383d; /* Link color */
+    font-weight: 600;
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
+}
+
+p.container_index,
+p.container_projects,
+p.container_sm_contact {
+    font-size: 12px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
